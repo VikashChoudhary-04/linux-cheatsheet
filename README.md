@@ -4,15 +4,6 @@ Welcome to my *Linux Cheatsheet* — a beginner-friendly guide to the most commo
 
 ---
 
-## 📖 Contents
-
-- [📁 Basic Navigation Commands](#-basic-navigation-commands)
-- [📝 File & Directory Commands](#-file--directory-commands)
-- [👀 Viewing Files](#-viewing-files)
-- [📦 System Information](#-system-information)
-- [🔧 More Coming Soon...](#-more-coming-soon)
-  
-
 ## 📬 Feedback
 
 If you're a beginner like me and have suggestions or requests for what to add next — feel free to open an issue or pull request. Let's grow together!
