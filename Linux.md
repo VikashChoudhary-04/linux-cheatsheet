@@ -150,8 +150,13 @@
 
 **-`vim Filename`: Edit and write in a file.
 **`Shift + i`: Enter Insert mode (for writing).**
+
 **`:wq`: Save changes and quit file.**
+
 **`3yy`: Keep cursor at start of the text you want to copy. (In command mode) Type this to copy next 3 lines. You can choose any number of lines.**
+
 **`p`: Press this in command mode to paste copied lines.**
+
 **`o`: In command mode, keep you cursor on a particular line. Pressing this will add a line in between this line and the next line and we will enter insert mode.**
+
 **`u`: In command mode, use this to undo a task when using Vim.**
