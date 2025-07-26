@@ -148,7 +148,8 @@
 
 **-`echo 'Text' | Tee FileName`: Write the text in the file and also show it on screen.**
 
-**-`vim Filename`: Edit and write in a file.
+**-`vim Filename`: Edit and write in a file.**
+
 **`Shift + i`: Enter Insert mode (for writing).**
 
 **`:wq`: Save changes and quit file.**
