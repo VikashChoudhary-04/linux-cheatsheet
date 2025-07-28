@@ -152,12 +152,48 @@
 
 **`Shift + i`: Enter Insert mode (for writing).**
 
-**`:wq`: Save changes and quit file.**
+**`:wq` or `Shift + zz`: Save changes and quit file in vim.**
 
-**`3yy`: Keep cursor at start of the text you want to copy. (In command mode) Type this to copy next 3 lines. You can choose any number of lines.**
+**`3yy`: In Vim, Keep cursor at start of the text you want to copy. (In command mode) Type this to copy next 3 lines. You can choose any number of lines.**
 
-**`p`: Press this in command mode to paste copied lines.**
+**`p`: In vim, Press this in command mode to paste copied lines.**
 
-**`o`: In command mode, keep you cursor on a particular line. Pressing this will add a line in between this line and the next line and we will enter insert mode.**
+**`o`: In vim command mode, keep you cursor on a particular line. Pressing this will add a line in between this line and the next line and we will enter insert mode.**
 
-**`u`: In command mode, use this to undo a task when using Vim.**
+**`u`: In vim command mode, use this to undo a task when using Vim.**
+
+**`q!`: Exit vim file without saving.**
+
+**`10gg`: 10th line. It can be any number.**
+
+**`:set number`: Show line numbers in vim file.**
+
+**`/word`: To find occurance of the word in the file.**
+
+**`UserAdd Username` or `AddUser Username`: Add new user. Also creates a group with the same name.**
+
+**`id Username`: Information about username.**
+
+**`UserDel Username`: Delete user. This command is used by root user.**
+
+**`UserDel -r Username`: Delete user from /home directory.**
+
+**`cd ~`: Root's home directory.**
+
+**`cat /etc/passwd | grep UserName`: Show information about user.**
+
+**`usermod -c "Text" Username`: Add comment about user in user information.**
+
+**`usermod -l NewName OldName`: Change name of the user in user information. Changes shown only in configurations and not home directory.**
+
+**`!98`: Run 98th command from history again. It can be any number.**
+
+**`usermod -s /sbin/nologin username`: Change shell of user information.**
+
+**`usermod -d /DirectoryPath -m Username`: Change user's home directory and shift its data too.**
+
+**`usermod -u UserId Username`: Change user id of the user.**
+
+**`sudo UserAdd Username`: Allows creating new user even when not in root. It provides extra permissions.** 
+
+**`vim /etc/sudoers`: Used to give rights to other users by writing the username in the line next to the line for root. We can decide specific permissions for the user by changing "All".**
