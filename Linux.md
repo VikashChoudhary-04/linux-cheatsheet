@@ -4,11 +4,15 @@
 
 **## Navigation**
 
-**- `pwd` : shows the current directory path**
+**-`pwd` : shows the current directory path**
 
-**- `ls` : lists files and folders in a directory**
+**-`ls` : lists files and folders in a directory**
 
-**- `ls -la` = List hidden files and show details** 
+**-`ls -la`: List hidden files and show details** 
+
+**-`ls -l`: List of files along with permission given to user, group and other users**
+
+**-`ls -ld`: List of directories along with permission given to user, group and other users**
 
 **-`ls -i filename`(Inode number): Show metadata like file type, permissions, owner, size, etc about the file**
 
@@ -170,30 +174,60 @@
 
 **`/word`: To find occurance of the word in the file.**
 
-**`UserAdd Username` or `AddUser Username`: Add new user. Also creates a group with the same name.**
+**-`UserAdd Username` or `AddUser Username`: Add new user. Also creates a group with the same name.**
 
-**`id Username`: Information about username.**
+**-`id Username`: Information about username.**
 
-**`UserDel Username`: Delete user. This command is used by root user.**
+**-`UserDel Username`: Delete user. This command is used by root user.**
 
-**`UserDel -r Username`: Delete user from /home directory.**
+**-`UserDel -r Username`: Delete user from /home directory.**
 
-**`cd ~`: Root's home directory.**
+**-`cd ~`: Root's home directory.**
 
-**`cat /etc/passwd | grep UserName`: Show information about user.**
+**-`cat /etc/passwd | grep UserName`: Show information about user.**
 
-**`usermod -c "Text" Username`: Add comment about user in user information.**
+**-`usermod -c "Text" Username`: Add comment about user in user information.**
 
-**`usermod -l NewName OldName`: Change name of the user in user information. Changes shown only in configurations and not home directory.**
+**-`usermod -l NewName OldName`: Change name of the user in user information. Changes shown only in configurations and not home directory.**
 
-**`!98`: Run 98th command from history again. It can be any number.**
+**-`!98`: Run 98th command from history again. It can be any number.**
 
-**`usermod -s /sbin/nologin username`: Change shell of user information.**
+**-`Usermod -s /sbin/nologin username`: Change shell of user information to not login.**
 
-**`usermod -d /DirectoryPath -m Username`: Change user's home directory and shift its data too.**
+**-`Usermod -s /bin/bash UserName`: Change shell of user information to login.**
 
-**`usermod -u UserId Username`: Change user id of the user.**
+**-`Usermod -d /DirectoryPath -m Username`: Change user's home directory and shift its data too.**
 
-**`sudo UserAdd Username`: Allows creating new user even when not in root. It provides extra permissions.** 
+**-`Usermod -u UserId Username`: Change user id of the user.**
 
-**`vim /etc/sudoers`: Used to give rights to other users by writing the username in the line next to the line for root. We can decide specific permissions for the user by changing "All".**
+**-`sudo UserAdd Username`: Allows creating new user even when not in root. It provides extra permissions.** 
+
+**-`vim /etc/sudoers`: Used to give rights to other users by writing the username in the line next to the line for root. We can decide specific permissions for the user by changing "All".**
+
+**-`GroupAdd GroupName`: Create group.**
+
+**-`GroupDel GroupName`: Delete group.**
+
+**-`Usermod -G Group name UserName`: Add a user to a group.**
+
+**-`%GroupName ALL=(ALL) NOPASSWD:ALL`: Allows Sudo rights to a group without needing password. To be written in /etc/sudoers.**
+
+**-`Usermod -aG GroupName UserName`: Add a user to another group without removing it from the original group.**
+
+**-`PASS_MAX_DAYS`: Set number of days to change users' password after.**
+
+**-`Useradd -G GroupName UserName`: Add user to a group during the time of its creation.**
+
+**-`Useradd -u UserId UserName`: Add user along with its user ID. -c and others can also be added.**
+
+**-`Groupmod -g 20000 GroupName`: Make changes to a group. Here we changed the group's Id.**
+
+**-`Groupmod -n OldName NewName`: Change name of a group.**
+
+**-`drwxr-xr-x 2 UserName GroupName 6 July 25 1:29 Directory/FileName`: d means its a directory (- for file). rwx is the read, write and execution permissions given to the owner. r-x is the read and execute permissions given to the group of the owner. r-x is the read and execute permissions given to other users.**
+
+**-`chmod o+rwx /FilePath`: Gives reading, writing and execution permissions to o (other users). a can be used for all, u for owner (user) and g for group.**
+
+**-`chmod r=a`: Give read permission to all. It can be done for w and x too.**
+
+**-`chgrp GroupName DirectoryName`: Change group of a directory.**
