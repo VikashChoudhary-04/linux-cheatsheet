@@ -245,7 +245,7 @@
 
 **`5` = Read and execute** 
 
-**`6` = Read and write **
+**`6` = Read and write**
 
 **`7` = Read, Write and execute**
 
