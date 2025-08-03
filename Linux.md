@@ -204,6 +204,7 @@
 
 **-`vim /etc/sudoers`: Used to give rights to other users by writing the username in the line next to the line for root. We can decide specific permissions for the user by changing "All".**
 
+
 **-`GroupAdd GroupName`: Create group.**
 
 **-`GroupDel GroupName`: Delete group.**
@@ -224,13 +225,13 @@
 
 **-`Groupmod -n OldName NewName`: Change name of a group.**
 
+**-`gpasswd -d UserName GroupName`: Remove a user from a group.**
+
 **-`drwxr-xr-x 2 UserName GroupName 6 July 25 1:29 Directory/FileName`: d means its a directory (- for file). rwx is the read, write and execution permissions given to the owner. r-x is the read and execute permissions given to the group of the owner. r-x is the read and execute permissions given to other users.**
 
 **-`chmod o+rwx /FilePath`: Gives reading, writing and execution permissions to o (other users). a can be used for all, u for owner (user) and g for group.**
 
 **-`chmod r=a`: Give read permission to all. It can be done for w and x too.**
-
-**-`chgrp GroupName DirectoryName`: Change group of a directory.**
 
 **-`Numeric method of permissions`**
 
@@ -257,3 +258,29 @@
 **2nd digit for group.**
 
 **3rd digit for other users.**
+
+**-`chmod 700 /DirectoryPath`: This gives all 3 permissions to user and no permission to group and others.**
+
+**-`chgrp GroupName DirectoryName`: Change group of a directory.**
+
+**-`chown UserName DirectoryName`: Change the owner of a directory.**
+
+**-`ip`: It gives information about internet protocol (IP) of virtual machine.**
+
+**-`ping www.website.com`: Ping a popular website to check internet connection.**
+
+**-`nmcli connection add type ethernet con-name my-connection`: Create a new connection. It is possible to run this command when the device is connected to internet.**
+
+**-`nmcli connection modify my-connection ipv4.addresses 192.168.1.1/24 ipv4.dns 192.168.1.0 ipv4.gateway 192.168.1.2 method manual connection.autoconnect yes`: Make specified changes to the connection like ip address, DNS, gateway, method, etc. We can make changes to any one of these.**
+
+**-`nmcli connection up my-connection`: Activate connection. In place of up, we can use down to deactivate the connection.**
+
+**-`nmcli connection show my-connection`: Shows information about a connection like its ip address, DNS, etc.**
+
+**-`nmcli connection delete my-connection`: Deletes a connection.**
+
+**-`nmtui`: Execute commands in GUI mode.**
+
+**-`[root@localhost ~]`: This is shown on the left side of each command in linux. 'root' is the username here. '@' is a seperator used to seperate 'root' and 'localhost'. 'localhost' is the machine's name. '~' represents the root's home directory.**
+
+**-`hostnamectl set-hostname DesiredName`: It is used to change hostname to a desired name.**
