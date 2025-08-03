@@ -240,9 +240,9 @@
 4 = Read
 5 = Read and execute 
 6 = Read and write 
-7 = Read, Write and execute 
+7 = Read, Write and execute**
 
-Full permission = 777
+**Full permission = 777
 1st digit for owner user
 2nd digit for group
 3rd digit for other users**
