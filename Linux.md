@@ -233,6 +233,7 @@
 **-`chgrp GroupName DirectoryName`: Change group of a directory.**
 
 **-`Numeric method of permissions`**
+
 **`0` = No permission**
 
 **`1` = Execute**
