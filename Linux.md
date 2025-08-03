@@ -245,4 +245,4 @@
 Full permission = 777
 1st digit for owner user
 2nd digit for group
-3rd digit for other users
+3rd digit for other users**
