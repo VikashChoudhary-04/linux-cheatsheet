@@ -231,3 +231,18 @@
 **-`chmod r=a`: Give read permission to all. It can be done for w and x too.**
 
 **-`chgrp GroupName DirectoryName`: Change group of a directory.**
+
+**-`Numeric method of permissions`
+0 = No permission 
+1 = Execute
+2 = Write 
+3 = Write and execute 
+4 = Read
+5 = Read and execute 
+6 = Read and write 
+7 = Read, Write and execute 
+
+Full permission = 777
+1st digit for owner user
+2nd digit for group
+3rd digit for other users
