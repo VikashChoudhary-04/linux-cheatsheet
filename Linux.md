@@ -283,4 +283,79 @@
 
 **-`[root@localhost ~]`: This is shown on the left side of each command in linux. 'root' is the username here. '@' is a seperator used to seperate 'root' and 'localhost'. 'localhost' is the machine's name. '~' represents the root's home directory.**
 
+**-`alias`: Creates a shortcut (custom name) for a command or a sequence of commands to simplify repetitive command-line tasks.**
+
+**-`alias ll='ls -la'`: Creates a temporary alias ll that executes the ls -la command in the current terminal session.**
+
+**-`alias update='sudo apt update && sudo apt upgrade'`: Creates a temporary alias update to run system update and upgrade commands together.**
+
+**-`nano ~/.bashrc`: Opens the Bash configuration file to add or modify permanent aliases.**
+
+**-`source ~/.bashrc`: Reloads the Bash configuration file so newly added aliases take effect without restarting the terminal.**
+
+**-`unalias ll`: Removes the alias ll from the current terminal session.**
+
+**-`~/.bashrc`: A shell configuration file that runs at terminal startup and stores permanent aliases and shell settings.**
 **-`hostnamectl set-hostname DesiredName`: It is used to change hostname to a desired name.**
+
+**-`exit`: Terminates the current shell session and closes the terminal or returns to the previous shell.**
+
+**-`logout`: Ends a login shell session; mainly used when working in a login shell environment.**
+
+**-`env`: Displays all environment variables currently set for the active shell session.**
+
+**-`echo $HOME`: Prints the path of the current user’s home directory stored in the HOME environment variable.**
+
+**-`PATH`: An environment variable that defines the search locations for executable files when a command is run.**
+
+**-`export TEST=test`: Creates an environment variable named TEST for the current terminal session.**
+
+**-`~/.bashrc`: Bash configuration file used to store persistent environment variables for interactive shells.**
+
+**-`~/.zshrc`: Zsh configuration file used to define persistent environment variables in Zsh shells.**
+
+**-`~/.config/fish/config.fish`: Fish shell configuration file used to set persistent environment variables in Fish shell.**
+
+- expand: Converts tab characters in a file into spaces (8 spaces per tab by default) and outputs the result to standard output.
+
+- expand sample.txt: Reads sample.txt and replaces all tab characters with spaces for consistent text formatting.
+
+- unexpand: Converts spaces back into tab characters to reduce file size or follow tab-based formatting standards.
+
+- unexpand -a result.txt: Converts all groups of spaces (not just leading spaces) in result.txt into tabs.
+
+- join: Merges lines from two sorted files based on a common field (first field by default).
+
+- join file1.txt file2.txt: Joins two files using their common first column as the matching key.
+
+- join -1 2 -2 1 file1.txt file2.txt: Joins files by specifying field 2 from the first file and field 1 from the second file as the matching fields.
+
+- split: Divides a large file into smaller files for easier management.
+
+- split somefile: Splits somefile into multiple files of 1000 lines each by default (named xaa, xab, etc.).
+
+- tr: Translates, deletes, or modifies characters from standard input; commonly used with pipes for text processing.
+
+- tr a-z A-Z: Translates all lowercase letters to uppercase.
+
+- tr -d '0-9': Deletes all digits from the input stream.
+
+- tr -s ' ': Squeezes repeated spaces into a single space to normalize text formatting.
+
+- uniq: Removes duplicate adjacent lines from a file or standard input.
+
+- uniq reading.txt: Outputs the file content with repeated adjacent lines removed.
+
+- uniq -c reading.txt: Displays each line prefixed with the number of times it occurs consecutively.
+
+- uniq -u reading.txt: Displays only lines that are not repeated (unique lines).
+
+- uniq -d reading.txt: Displays only lines that are repeated.
+
+- sort: Sorts lines of text alphabetically or numerically.
+
+- sort reading.txt | uniq: Sorts the file first so identical lines become adjacent, then removes duplicates correctly.
+
+- nl: Adds line numbers to each line of a file or standard input, making text easier to read and reference.
+
+- nl file1.txt: Displays the contents of file1.txt with line numbers prefixed to each line.
