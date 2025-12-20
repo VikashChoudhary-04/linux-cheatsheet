@@ -413,3 +413,123 @@
 - vipw: Safely edits the /etc/passwd file by locking it during editing to prevent corruption and syntax errors.
 
 - adduser: An interactive, user-friendly command for creating a new user account, which prompts for details like password and user information while setting up the account automatically.
+
+- umask: Sets the default permission mask that determines which permissions are removed from newly created files and directories.
+
+- umask 021: Configures default permissions so the user has full access, the group loses write permission, and others lose execute permission for newly created files.
+
+- ps aux: Displays all processes for all users in a detailed, user-oriented format, including processes without a controlling terminal.
+
+- ps -ef: Shows a full-format listing of all processes on the system, including parent-child relationships and start times.
+
+- ps -e: Lists all running processes on the system (less detailed than ps -ef).
+
+- top: Provides a real-time, continuously updating view of running processes and system resource usage (CPU, memory, etc.).
+
+- ps l: Displays running processes in long-format output, including the PPID (Parent Process ID), which helps observe parent–child process relationships.
+
+- kill: Sends a signal to a process (by PID) to control its behavior, most commonly to request termination (SIGTERM by default or SIGKILL for forceful termination).
+
+- kill <PID>: Sends the default SIGTERM (signal 15) to a process, requesting graceful termination.
+
+- kill -15 <PID>: Explicitly sends SIGTERM (polite termination request) to a process.
+
+- kill -9 <PID>: Sends SIGKILL (signal 9) to immediately and forcefully terminate a process without cleanup.
+
+- kill -1 <PID>: Sends SIGHUP (signal 1), commonly used to tell daemon processes to reload configuration files.
+
+- kill -2 <PID>: Sends SIGINT (signal 2), equivalent to pressing Ctrl-C in the terminal.
+
+- kill -19 <PID>: Sends SIGSTOP (signal 19) to pause a process without terminating it.
+
+- kill -0 <PID>: Checks whether a process exists and whether the user has permission to signal it (does not terminate the process).
+
+- nice: Starts a new process with a specified niceness (priority) value to influence CPU scheduling.
+
+- nice -n 5 <command>: Launches a command with a niceness value of 5, giving it lower priority than default processes.
+
+- renice: Changes the niceness (priority) of an already running process.
+
+- renice 10 -p <PID>: Sets the niceness value of the running process with the given PID to 10, lowering its CPU priority.
+
+- htop: An interactive, enhanced process viewer that reads data from /proc to display real-time system and process information in a user-friendly interface.
+
+- sleep: Pauses execution for a specified amount of time (in seconds), commonly used to demonstrate job control and background execution.
+
+- sleep 1000 &: Runs the sleep command in the background, immediately returning the shell prompt.
+
+- jobs: Lists all jobs running in the background or suspended within the current shell session.
+
+- bg: Resumes a suspended job and runs it in the background.
+
+- fg: Brings a background or suspended job to the foreground.
+
+- fg %<job_id>: Brings a specific background job (identified by job ID) to the foreground.
+
+- kill %<job_id>: Sends a signal to a job using its job ID instead of a process ID (PID).
+
+- gzip: Compresses a single file, replacing it with a .gz compressed version.
+
+- gzip <filename>: Compresses the specified file and creates <filename>.gz.
+
+- gunzip: Decompresses a .gz file and restores the original file.
+
+- gunzip <filename>.gz: Decompresses a gzip-compressed file.
+
+- tar: Creates, extracts, and manages archive files (tarballs).
+
+- tar cvf <archive>.tar <files>: Creates a new tar archive containing specified files or directories.
+
+- tar czvf <archive>.tar.gz <files>: Creates a gzip-compressed tar archive in a single step.
+
+- tar xvf <archive>.tar: Extracts files from a tar archive.
+
+- tar xzvf <archive>.tar.gz: Decompresses and extracts a gzip-compressed tar archive.
+
+- dpkg: Low-level package management command for installing, removing, and querying .deb packages on Debian-based systems.
+
+- dpkg -i <package>.deb: Installs a Debian package file (.deb) without resolving dependencies.
+
+- dpkg -r <package>: Removes an installed Debian package but keeps configuration files.
+
+- dpkg -l: Lists all installed Debian packages on the system.
+
+- rpm: Low-level package management command for installing, removing, and querying .rpm packages on Red Hat–based systems.
+
+- rpm -i <package>.rpm: Installs an RPM package file without resolving dependencies.
+
+- rpm -e <package>: Removes (erases) an installed RPM package.
+
+- rpm -qa: Lists all installed RPM packages (q = query, a = all).
+
+- apt: High-level package manager for Debian-based systems used to install, update, remove, and inspect software packages.
+
+- apt install <package>: Installs a package from configured repositories and automatically resolves dependencies.
+
+- apt remove <package>: Removes an installed package while keeping configuration files.
+
+- apt update: Refreshes the local package index with the latest information from repositories.
+
+- apt upgrade: Upgrades all installed packages to their latest available versions.
+
+- apt show <package>: Displays detailed information about a package (version, size, description, dependencies).
+
+- yum: Package manager for RPM-based systems (RHEL, CentOS, Fedora) that installs, updates, and removes software with dependency handling.
+
+- yum install <package>: Installs a package and all required dependencies from repositories.
+
+- yum erase <package>: Removes an installed package from the system.
+
+- yum update: Updates all installed packages and refreshes package metadata.
+
+- yum info <package>: Shows detailed information about a specific package.
+
+- ./configure: Runs the configuration script to check system dependencies and prepare the source code for compilation.
+
+- make: Compiles the source code according to rules defined in the Makefile.
+
+- make install: Installs the compiled software into system directories (usually requires superuser privileges).
+
+- checkinstall: Creates and installs a native system package (e.g., .deb) from compiled source code, allowing clean package management.
+
+- make uninstall: Attempts to remove software installed from source by reversing the installation steps (only works if supported by the Makefile).
