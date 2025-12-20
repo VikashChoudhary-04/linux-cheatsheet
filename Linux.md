@@ -316,46 +316,100 @@
 
 **-`~/.config/fish/config.fish`: Fish shell configuration file used to set persistent environment variables in Fish shell.**
 
-- expand: Converts tab characters in a file into spaces (8 spaces per tab by default) and outputs the result to standard output.
+**-`expand`: Converts tab characters in a file into spaces (8 spaces per tab by default) and outputs the result to standard output.**
 
-- expand sample.txt: Reads sample.txt and replaces all tab characters with spaces for consistent text formatting.
+**-`expand sample.txt`: Reads sample.txt and replaces all tab characters with spaces for consistent text formatting.**
 
-- unexpand: Converts spaces back into tab characters to reduce file size or follow tab-based formatting standards.
+**-`unexpand`: Converts spaces back into tab characters to reduce file size or follow tab-based formatting standards.**
 
-- unexpand -a result.txt: Converts all groups of spaces (not just leading spaces) in result.txt into tabs.
+**-`unexpand -a result.txt`: Converts all groups of spaces (not just leading spaces) in result.txt into tabs.**
 
-- join: Merges lines from two sorted files based on a common field (first field by default).
+**-`join`: Merges lines from two sorted files based on a common field (first field by default).**
 
-- join file1.txt file2.txt: Joins two files using their common first column as the matching key.
+**-`join file1.txt file2.txt`: Joins two files using their common first column as the matching key.**
 
-- join -1 2 -2 1 file1.txt file2.txt: Joins files by specifying field 2 from the first file and field 1 from the second file as the matching fields.
+**-`join -1 2 -2 1 file1.txt file2.txt`: Joins files by specifying field 2 from the first file and field 1 from the second file as the matching fields.**
 
-- split: Divides a large file into smaller files for easier management.
+**-`split`: Divides a large file into smaller files for easier management.**
 
-- split somefile: Splits somefile into multiple files of 1000 lines each by default (named xaa, xab, etc.).
+**-`split somefile`: Splits somefile into multiple files of 1000 lines each by default (named xaa, xab, etc.).**
 
-- tr: Translates, deletes, or modifies characters from standard input; commonly used with pipes for text processing.
+**-`tr`: Translates, deletes, or modifies characters from standard input; commonly used with pipes for text processing.**
 
-- tr a-z A-Z: Translates all lowercase letters to uppercase.
+**-`tr a-z A-Z`: Translates all lowercase letters to uppercase.**
 
-- tr -d '0-9': Deletes all digits from the input stream.
+**-`tr -d '0-9'`: Deletes all digits from the input stream.**
 
-- tr -s ' ': Squeezes repeated spaces into a single space to normalize text formatting.
+**-`tr -s ' '`: Squeezes repeated spaces into a single space to normalize text formatting.**
 
-- uniq: Removes duplicate adjacent lines from a file or standard input.
+**-`uniq`: Removes duplicate adjacent lines from a file or standard input.**
 
-- uniq reading.txt: Outputs the file content with repeated adjacent lines removed.
+**-`uniq reading.txt`: Outputs the file content with repeated adjacent lines removed.**
 
-- uniq -c reading.txt: Displays each line prefixed with the number of times it occurs consecutively.
+**-`uniq -c reading.txt`: Displays each line prefixed with the number of times it occurs consecutively.**
 
-- uniq -u reading.txt: Displays only lines that are not repeated (unique lines).
+**-`uniq -u reading.txt`: Displays only lines that are not repeated (unique lines).**
 
-- uniq -d reading.txt: Displays only lines that are repeated.
+**-`uniq -d reading.txt`: Displays only lines that are repeated.**
 
-- sort: Sorts lines of text alphabetically or numerically.
+**-`sort`: Sorts lines of text alphabetically or numerically.**
 
-- sort reading.txt | uniq: Sorts the file first so identical lines become adjacent, then removes duplicates correctly.
+**-`sort reading.txt | uniq`: Sorts the file first so identical lines become adjacent, then removes duplicates correctly.**
 
-- nl: Adds line numbers to each line of a file or standard input, making text easier to read and reference.
+**-`nl`: Adds line numbers to each line of a file or standard input, making text easier to read and reference.**
 
-- nl file1.txt: Displays the contents of file1.txt with line numbers prefixed to each line.
+**-`nl file1.txt`: Displays the contents of file1.txt with line numbers prefixed to each line.**
+
+**-`emacs`: Launches the Emacs text editor, a highly powerful and extensible editor used for editing files, writing code, and performing many system tasks within a single environment.**
+
+- C-x C-s: Saves the currently open file in Emacs.
+
+- C-x C-w: Saves the current buffer with a new filename (“Save As”).
+
+- C-x s: Saves all modified buffers, prompting for confirmation if needed.
+
+- C-x C-f: Opens an existing file or creates a new file in Emacs; can also open directories.
+
+- C-x b: Switches to another buffer by prompting for the buffer name.
+
+- C-x → (right arrow): Cycles to the next open buffer.
+
+- C-x ← (left arrow): Cycles to the previous open buffer.
+
+- C-x 2: Splits the current window vertically into two windows.
+
+- C-x o: Moves the cursor to the other window in a split view.
+
+- C-x 1: Closes all other windows, keeping only the current window visible.
+
+- C-x k: Kills (closes) the current buffer.
+
+- C-↑ (Ctrl + Up Arrow): Moves the cursor up by one paragraph.
+
+- C-↓ (Ctrl + Down Arrow): Moves the cursor down by one paragraph.
+
+- C-← (Ctrl + Left Arrow): Moves the cursor one word to the left.
+
+- C-→ (Ctrl + Right Arrow): Moves the cursor one word to the right.
+
+- M->: Moves the cursor to the end of the buffer.
+
+- C-space: Sets the mark to begin selecting a region of text.
+
+- C-w: Kills (cuts) the selected region of text.
+
+- C-y: Yanks (pastes) the most recently killed text.
+
+- C-x C-c: Exits Emacs; prompts to save any unsaved buffers before closing.
+
+- C-h C-h: Opens the Emacs help menu for guidance and documentation.
+
+- C-x u: Undoes the last action in Emacs.
+
+- su: Switches the current user to another user (root by default) by starting a new shell after password authentication.
+
+- visudo: Safely edits the /etc/sudoers file with syntax checking to prevent configuration errors that could break sudo access.
+
+- vipw: Safely edits the /etc/passwd file by locking it during editing to prevent corruption and syntax errors.
+
+- adduser: An interactive, user-friendly command for creating a new user account, which prompts for details like password and user information while setting up the account automatically.
