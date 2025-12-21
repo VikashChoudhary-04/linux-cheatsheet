@@ -533,3 +533,27 @@
 - checkinstall: Creates and installs a native system package (e.g., .deb) from compiled source code, allowing clean package management.
 
 - make uninstall: Attempts to remove software installed from source by reversing the installation steps (only works if supported by the Makefile).
+
+- mknod: Manually creates a device node (special file) in /dev by specifying its type and major/minor numbers.
+
+- mknod /dev/sdb1 b 8 3: Creates a block device named /dev/sdb1 with major number 8 and minor number 3.
+
+- udevadm: Queries and controls the udev device manager, allowing inspection of device metadata and rules.
+
+- udevadm info --query=all --name=/dev/sda: Displays detailed udev and sysfs information for the specified device.
+
+- lsusb: Lists all USB devices connected to the system along with basic identification details.
+
+- lsusb -t: Displays USB devices in a hierarchical (tree-like) structure showing hubs and device relationships.
+
+- lspci: Lists all PCI devices such as graphics cards, network adapters, and sound cards.
+
+- lssci: Lists SCSI and SATA storage devices, including hard drives, SSDs, and optical drives.
+
+- dd: Copies and converts data at a low level by reading from an input source and writing to an output destination, commonly used for disk imaging and backups.
+
+- dd if=<input> of=<output>: Copies data from the specified input file or device to the specified output file or device.
+
+- dd if=<input> of=<output> bs=<bytes>: Copies data using a specified block size to control read/write performance.
+
+- dd if=<input> of=<output> bs=<bytes> count=<number>: Copies a fixed amount of data defined by block size multiplied by count.
