@@ -557,3 +557,63 @@
 - dd if=<input> of=<output> bs=<bytes>: Copies data using a specified block size to control read/write performance.
 
 - dd if=<input> of=<output> bs=<bytes> count=<number>: Copies a fixed amount of data defined by block size multiplied by count.
+
+- ls -l /: Lists all top-level directories in the root (/) filesystem with detailed information such as permissions, ownership, size, and timestamps.
+
+- df -T: Displays disk space usage for all mounted filesystems and shows their filesystem types (e.g., ext4, xfs, tmpfs).
+
+- sudo parted -l: Lists all disks and their partition tables (MBR/GPT), showing partition layout, sizes, filesystem types, and flags.
+
+- fdisk: A command-line disk partitioning tool used for managing MBR partition tables (does not support GPT).
+
+- gparted: A graphical disk partitioning tool (GUI) that supports both MBR and GPT and provides a visual alternative to command-line tools.
+
+- gdisk: A command-line disk partitioning tool similar to fdisk, but designed specifically for GPT partition tables.
+
+- sudo parted: Launches the parted utility in interactive mode for manually managing disk partitions.
+
+- select /dev/sdb: (inside parted) Selects the target disk device to operate on.
+
+- print: (inside parted) Displays the current partition table of the selected disk.
+
+- mkpart primary ext4 1MB 5000MB: (inside parted) Creates a primary partition formatted as ext4 between the specified start and end points.
+
+- resizepart 1 8000MB: (inside parted) Resizes partition number 1 to a new end position at 8000MB.
+
+- resize2fs: Resizes an ext2/ext3/ext4 filesystem to match the size of its underlying partition.
+
+- mkfs: Creates (formats) a filesystem on a disk partition so it can store files and directories.
+
+- mkfs -t ext4 /dev/sdb2: Creates an ext4 filesystem on the partition /dev/sdb2.
+
+- mount: Attaches a filesystem from a device to a directory (mount point) so it can be accessed.
+
+- mount -t ext4 /dev/sdb2 /mydrive: Mounts an ext4 filesystem from /dev/sdb2 to the directory /mydrive.
+
+- umount: Detaches a mounted filesystem safely from the system.
+
+- umount /mydrive: Unmounts a filesystem using its mount point.
+
+- umount /dev/sdb2: Unmounts a filesystem using the device name.
+
+- blkid: Displays block device attributes such as UUID and filesystem type.
+
+- mount UUID=<uuid> /mydrive: Mounts a filesystem using its UUID instead of a device name for stable identification.
+
+- cat /etc/fstab: Displays the contents of the /etc/fstab file to review configured filesystems that are mounted at boot.
+
+- mount -a: Mounts all filesystems defined in /etc/fstab (except those marked with the noauto option), useful for testing fstab entries without rebooting.
+
+- mkswap /dev/sdb2: Initializes a partition or file to be used as Linux swap space.
+
+- swapon /dev/sdb2: Enables the specified swap partition or file, making it available as virtual memory.
+
+- swapoff /dev/sdb2: Disables the specified swap partition or file, removing it from active swap usage.
+
+- df: Shows disk space usage of mounted filesystems (total, used, available).
+
+- du: Shows disk usage of files and directories to identify space consumption.
+
+- fsck: Checks and repairs filesystem inconsistencies caused by crashes, power failures, or corruption.
+
+- stat: Displays detailed inode and file metadata such as permissions, ownership, timestamps, size, inode number, and block allocation.
