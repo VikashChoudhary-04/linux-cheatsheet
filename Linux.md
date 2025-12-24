@@ -617,3 +617,11 @@
 - fsck: Checks and repairs filesystem inconsistencies caused by crashes, power failures, or corruption.
 
 - stat: Displays detailed inode and file metadata such as permissions, ownership, timestamps, size, inode number, and block allocation.
+
+- strace: Traces and displays system calls and signals made by a program, helping you understand how a process interacts with the Linux kernel (commonly used for debugging).
+
+- uname: Displays system information; commonly used to check the currently running kernel version (e.g., with uname -r).
+
+- lsmod: Displays a list of all kernel modules currently loaded into the Linux kernel.
+
+- modprobe: Loads or unloads kernel modules and automatically handles module dependencies.
