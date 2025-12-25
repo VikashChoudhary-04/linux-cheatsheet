@@ -625,3 +625,41 @@
 - lsmod: Displays a list of all kernel modules currently loaded into the Linux kernel.
 
 - modprobe: Loads or unloads kernel modules and automatically handles module dependencies.
+
+- service: Manages system services on System V–based (and compatible) init systems.
+
+- service --status-all: Lists all available services and shows whether each service is running, stopped, or in an unknown state.
+
+- service start: Starts a specified service.
+
+- service stop: Stops a specified running service.
+
+- service restart: Stops and then starts a service again, commonly used after configuration changes.
+
+- initctl: Primary command-line utility to manage Upstart jobs and events.
+
+- initctl list: Lists all Upstart jobs along with their current goal and status.
+
+- initctl status: Shows the current status of a specific Upstart job.
+
+- initctl start: Manually starts a specified Upstart job.
+
+- initctl stop: Manually stops a running Upstart job.
+
+- initctl restart: Restarts a job by stopping and then starting it again.
+
+- initctl emit: Emits a custom event that can trigger one or more Upstart jobs configured to listen for that event.
+
+- systemctl list-units: Lists all active systemd units currently managed by the system.
+
+- systemctl status networking.service: Displays the current status, activity state, and recent logs of the networking service.
+
+- sudo systemctl start networking.service: Starts the networking service immediately.
+
+- sudo systemctl stop networking.service: Stops the networking service if it is running.
+
+- sudo systemctl restart networking.service: Stops and then starts the networking service again.
+
+- sudo systemctl enable networking.service: Configures the networking service to start automatically at system boot.
+
+- sudo systemctl disable networking.service: Prevents the networking service from starting automatically at boot.
