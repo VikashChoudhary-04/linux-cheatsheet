@@ -663,3 +663,49 @@
 - sudo systemctl enable networking.service: Configures the networking service to start automatically at system boot.
 
 - sudo systemctl disable networking.service: Prevents the networking service from starting automatically at boot.
+
+- top: Displays a real-time, dynamic view of running processes and overall system resource utilization (CPU, memory, tasks)
+
+- uptime: Shows how long the system has been running, number of logged-in users, and load averages (same info as the first line of top)
+
+- top -p 1: Displays real-time resource usage for a specific process by PID (here, PID 1)
+
+- lsof: Lists all open files on the system along with the processes that opened them (files, directories, sockets, devices)
+
+- lsof .: Shows which processes are currently using the present working directory
+
+- fuser: Identifies processes (PIDs) that are accessing a specific file, directory, or filesystem
+
+- fuser -v .: Displays verbose information about which processes are using the current directory and how they are accessing it
+
+- fuser -k /mnt/usb: Sends a SIGKILL signal to all processes using the /mnt/usb mount point, freeing the resource so it can be unmounted
+
+- ps m: Displays processes along with their threads, showing threads listed under their parent process
+
+- uptime: Displays the current time, system uptime, number of logged-in users, and the system load average over the last 1, 5, and 15 minutes
+
+- cat /proc/cpuinfo: Shows detailed information about the CPU, including the number of cores, which helps interpret load average correctly
+
+- iostat: Displays CPU utilization statistics and detailed disk I/O activity, including read/write rates, transfers per second, and I/O wait indicators
+
+- vmstat: Reports system performance statistics, including processes, memory usage, swap activity, I/O, interrupts, context switches, and CPU utilization
+
+- apt install sysstat: Installs the sysstat package, which provides the sar tool for historical system monitoring
+
+- sar -q: Displays system load and run-queue statistics collected from the start of the current day
+
+- sar -r: Displays memory usage statistics collected from the start of the current day
+
+- sar -P: Displays CPU usage statistics
+
+- sar -q /var/log/sysstat/saXX: Displays load statistics for a specific day using the corresponding sysstat log file (where XX is the day number, e.g., sa02)
+
+- crontab -e: Opens the current user’s crontab file in an editor to add or modify scheduled jobs
+
+- crontab -l: Lists all cron jobs scheduled for the current user
+
+- crontab -r: Removes all cron jobs for the current user
+
+- 30 08 * * * /home/pete/scripts/change_wallpaper: Cron job entry that runs the script every day at 8:30 AM
+
+- /home/pete/scripts/change_wallpaper: Script executed by cron according to the defined schedule
