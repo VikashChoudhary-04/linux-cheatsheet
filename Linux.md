@@ -709,3 +709,35 @@
 - 30 08 * * * /home/pete/scripts/change_wallpaper: Cron job entry that runs the script every day at 8:30 AM
 
 - /home/pete/scripts/change_wallpaper: Script executed by cron according to the defined schedule
+
+- less /var/log/syslog: Views system log entries collected by the system logger in an interactive pager
+
+- /var/log/syslog: Primary log file that stores system and service messages on many Linux distributions
+
+- /var/log/messages: General system log file used on some Linux distributions to record system events
+
+- less /etc/rsyslog.d/50-default.conf: Opens the rsyslog configuration file to view logging rules, selectors, and log destinations
+
+- /var/log/syslog: Stores most system log messages collected by rsyslog, excluding authentication-related logs
+
+- logger -s Hello: Sends a custom log message to the system logger and also prints it to standard error
+
+- /etc/rsyslog.d/: Directory containing rsyslog configuration files that define how and where logs are written
+
+- /var/log/messages: Stores general, non-critical system messages from the kernel, daemons, and services for overall system activity monitoring
+
+- /var/log/syslog: Contains a more comprehensive set of system log messages, excluding authentication logs, useful for detailed troubleshooting
+
+- /var/log: Directory that holds most system and application log files for monitoring and debugging
+
+- dmesg: Displays messages from the kernel ring buffer, including hardware initialization and kernel events, especially useful during boot or hardware issues
+
+- /var/log/dmesg: Stores kernel ring buffer messages written during boot; typically cleared and rewritten on each reboot
+
+- /var/log/kern.log: Primary persistent log file for kernel-related messages and events on the running system
+
+- /var/log/auth.log: Records authentication and authorization events on Debian-based systems, including successful and failed login attempts and privilege escalations
+
+- /var/log/secure: Records authentication and authorization events on Red Hat–based systems (alternative to auth.log)
+
+- logrotate: Automates log file management by rotating, compressing, and removing old log files based on defined rules in /etc/logrotate.conf and /etc/logrotate.d/
