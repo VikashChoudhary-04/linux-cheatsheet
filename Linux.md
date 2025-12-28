@@ -741,3 +741,57 @@
 - /var/log/secure: Records authentication and authorization events on Red Hat–based systems (alternative to auth.log)
 
 - logrotate: Automates log file management by rotating, compressing, and removing old log files based on defined rules in /etc/logrotate.conf and /etc/logrotate.d/
+
+- scp: Securely copies files between local and remote systems over SSH
+
+- scp myfile.txt username@remotehost.com:/remote/directory: Copies a local file to a directory on a remote host
+
+- scp username@remotehost.com:/remote/directory/myfile.txt /local/directory: Copies a file from a remote host to a local directory
+
+- scp -r mydir username@remotehost.com:/remote/directory: Recursively copies a local directory and its contents to a remote host
+
+- rsync: Synchronizes files and directories efficiently by transferring only changed data
+
+- rsync -v: Shows verbose output during transfer
+
+- rsync -r: Recursively copies directories
+
+- rsync -h: Displays file sizes in human-readable format
+
+- rsync -z: Compresses data during transfer
+
+- rsync -a: Uses archive mode to preserve permissions, ownership, and timestamps
+
+- rsync -avh /my/local/directory/one/ /my/local/directory/two/: Synchronizes two local directories
+
+- rsync -avh username@remotehost.com:/remote/directory/ /local/directory/: Syncs files from a remote host to the local system
+
+- rsync -avh /local/directory/ username@remotehost.com:/remote/directory/: Syncs files from the local system to a remote host
+
+- python -m http.server: Starts a simple HTTP server using Python 3 in the current directory
+
+- python -m SimpleHTTPServer: Starts a simple HTTP server using Python 2 in the current directory
+
+- http://IP_ADDRESS:8000: Accesses the shared directory from another machine on the same network
+
+- http://localhost:8000: Accesses the shared directory from the same machine
+
+- sudo service nfsclient start: Starts the NFS client service required to access NFS shares
+
+- sudo mount server:/directory /mount_directory: Mounts a remote NFS directory from the server to a local mount point
+
+- automount / amd: Dynamically mounts NFS shares on-demand to avoid boot-time delays when the network or server is unavailable
+
+- sudo apt install samba: Installs the Samba software suite on the system
+
+- sudo nano /etc/samba/smb.conf: Opens the main Samba configuration file for editing
+
+- mkdir -p /my/directory/to/share: Creates the directory that will be shared via Samba
+
+- sudo smbpasswd -a username: Adds a Linux user to Samba and sets a Samba-specific password
+
+- sudo service smbd restart: Restarts the Samba daemon to apply configuration changes
+
+- smbclient //HOST/myshare -U username: Connects to a Samba share from the command line
+
+- sudo mount -t cifs //SERVER/sharename /mnt/mountpoint -o user=username,pass=password: Mounts a Samba (CIFS) network share as a local directory
