@@ -795,3 +795,7 @@
 - smbclient //HOST/myshare -U username: Connects to a Samba share from the command line
 
 - sudo mount -t cifs //SERVER/sharename /mnt/mountpoint -o user=username,pass=password: Mounts a Samba (CIFS) network share as a local directory
+
+- ifconfig -a: Displays all network interfaces and their assigned IP addresses (legacy command)
+
+- ip addr show: Displays all network interfaces and their IPv4/IPv6 addresses using the modern ip tool
