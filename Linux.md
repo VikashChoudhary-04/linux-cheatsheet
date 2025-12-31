@@ -837,3 +837,21 @@
 - nm-tool: Displays NetworkManager’s current state and detailed information about managed network devices (deprecated on many modern systems).
 
 - nmcli: Command-line tool to view status, manage connections, and configure network devices controlled by NetworkManager.
+
+- ping: Tests network connectivity by sending ICMP echo request packets to a remote host and waiting for replies to verify reachability and latency.
+
+- ping -c <count> <host>: Sends a fixed number of ICMP echo requests (specified by -c) to a target host and then stops (e.g., -c 3 sends exactly three packets).
+
+- traceroute <host>: Displays the network path packets take from your system to the destination host by listing each intermediate router (hop) along the way, along with round-trip time delays for each hop.
+
+- netstat -at: Displays all active network connections, showing both listening and established TCP sockets.
+
+- netstat -a: Shows all sockets, including both listening and non-listening network connections.
+
+- netstat -t: Filters the output to display only TCP connections.
+
+- cat /etc/hosts: Displays the contents of the /etc/hosts file, showing static hostname-to-IP address mappings stored on the local system.
+
+- nslookup www.google.com: Queries a DNS server to resolve the domain name www.google.com and returns its corresponding IP address along with the DNS server that provided the response.
+
+- dig www.google.com: Performs a detailed DNS query for www.google.com, showing full response data including question section, answer records, query time, and the DNS server used.
