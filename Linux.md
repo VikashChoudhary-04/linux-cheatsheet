@@ -801,3 +801,39 @@
 - ip addr show: Displays all network interfaces and their IPv4/IPv6 addresses using the modern ip tool
 
 - route -n: Displays the Linux routing table in numeric form (without resolving hostnames), showing how network packets are routed, including destination networks, gateways, subnet masks, flags, and the network interface used.
+
+- ifconfig -a: Displays all network interfaces along with their current configuration, including inactive ones.
+
+- ifconfig eth0 192.168.2.1 netmask 255.255.255.0 up: Assigns an IPv4 address and netmask to the eth0 interface and brings it up.
+
+- ifup eth0: Activates the eth0 network interface using system configuration files.
+
+- ifdown eth0: Deactivates the eth0 network interface.
+
+- ip link show: Shows information about all network interfaces.
+
+- ip -s link show eth0: Displays detailed statistics (such as transmitted and received packets) for the eth0 interface.
+
+- ip address show: Lists IP addresses assigned to all network interfaces.
+
+- ip link set eth0 up: Brings the eth0 interface up.
+
+- ip link set eth0 down: Brings the eth0 interface down.
+
+- ip address add 192.168.1.1/24 dev eth0: Adds an IPv4 address with subnet mask to the eth0 interface.
+
+- sudo route add -net 192.168.2.1/23 gw 10.11.12.3: Adds a network route for 192.168.2.1/23 using 10.11.12.3 as the gateway.
+
+- sudo route del -net 192.168.2.1/23: Removes the specified network route from the routing table.
+
+- ip route add 192.168.2.1/23 via 10.11.12.3: Adds a network route using the modern ip utility, specifying the gateway for the destination network.
+
+- ip route delete 192.168.2.1/23 via 10.11.12.3: Deletes a specific route by defining both the destination network and gateway.
+
+- ip route delete 192.168.2.1/23: Deletes a route by specifying only the destination network when it is unique.
+
+- sudo dhclient: Requests a fresh IP address and network configuration from a DHCP server for available network interfaces using the DHCP protocol.
+
+- nm-tool: Displays NetworkManager’s current state and detailed information about managed network devices (deprecated on many modern systems).
+
+- nmcli: Command-line tool to view status, manage connections, and configure network devices controlled by NetworkManager.
