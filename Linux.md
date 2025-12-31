@@ -799,3 +799,5 @@
 - ifconfig -a: Displays all network interfaces and their assigned IP addresses (legacy command)
 
 - ip addr show: Displays all network interfaces and their IPv4/IPv6 addresses using the modern ip tool
+
+- route -n: Displays the Linux routing table in numeric form (without resolving hostnames), showing how network packets are routed, including destination networks, gateways, subnet masks, flags, and the network interface used.
