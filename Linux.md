@@ -1,4 +1,4 @@
-# 🐧 Linux Commands Cheatsheet (LOSSLESS & ARRANGED)
+# 🐧 Linux Commands Cheatsheet 
 
 ---
 
@@ -313,3 +313,4 @@
 * `command --help` : Help
 * `history` : Command history
 * `!98` : Run command 98
+
